@@ -42,7 +42,15 @@ namespace Aleksejev_Xamarin
             Textbtn.Clicked += Textbtn_Clicked;
             Timerbtn.Clicked += Timerbtn_Clicked;
             Boxbtn.Clicked += Boxbtn_Clicked;
-
+            try
+            {
+                Vibration.Vibrate();
+                var a = TimeSpan.FromSeconds(0.5);
+                Vibration.Vibrate(a);
+            }
+            catch (Exception)
+            {
+            }
 
         }
 
