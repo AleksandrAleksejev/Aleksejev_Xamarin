@@ -36,9 +36,12 @@ namespace Aleksejev_Xamarin
                 BackgroundColor = Color.Fuchsia,
                 TextColor = Color.Black,
             };
+            
             Backbtn.Clicked += Backbtn_Clicked;
+
            
         }
+
         Random rnd;
         int x = 10;
         private void Tap_Tapped(object sender, EventArgs e)
@@ -48,7 +51,7 @@ namespace Aleksejev_Xamarin
             x += 10;
             box.WidthRequest = box.Width + 5;
             box.HeightRequest= box.Height + 7;
-            box.Rotation += 1000000;
+            box.Rotation += 10;
         }
         private async void Backbtn_Clicked(object sender, EventArgs e)
         {

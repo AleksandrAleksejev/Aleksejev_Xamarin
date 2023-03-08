@@ -3,21 +3,24 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Aleksejev_Xamarin.Timer_Page">
     <ContentPage.Content>
-        <StackLayout x:Name="st">
+        <StackLayout>
             <Label x:Name="lbl"
                    Text="Siin ilmub timer"
                    FontSize="Title"
-                   BackgroundColor="AliceBlue"
-                   HorizontalTextAlignment="Center"
+                   BackgroundColor="CadetBlue"
+                   
                    >
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
                 </Label.GestureRecognizers>
+
             </Label>
-            <Button x:Name="onoff_btn"
-                    Text="Off timer"
-                    Clicked="onoff_btn_Clicked">
-                
+            <Button x:Name="Stopbtn"
+                    Text="Lülita sisse"
+                    FontSize="Title"
+                    BackgroundColor="CadetBlue"
+                    >
+
             </Button>
         </StackLayout>
     </ContentPage.Content>
