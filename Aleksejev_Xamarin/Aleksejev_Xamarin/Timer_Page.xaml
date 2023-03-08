@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Aleksejev_Xamarin.Timer_Page">
+    <ContentPage.Content>
+        <StackLayout x:Name="st">
+            <Label x:Name="lbl"
+                   Text="Siin ilmub timer"
+                   FontSize="Title"
+                   BackgroundColor="AliceBlue"
+                   HorizontalTextAlignment="Center"
+                   >
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+            <Button x:Name="onoff_btn"
+                    Text="Off timer"
+                    Clicked="onoff_btn_Clicked">
+                
+            </Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
