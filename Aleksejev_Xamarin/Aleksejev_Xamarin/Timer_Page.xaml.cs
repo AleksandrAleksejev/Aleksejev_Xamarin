@@ -30,13 +30,14 @@ namespace Aleksejev_Xamarin
 
         private async void NaitaAeg()
         {
-            while (true)
+            while (onoff)
             {
                 lbl.Text = DateTime.Now.ToString("T");
                 await Task.Delay(1000);
             }
             
         }
+        bool onoff;
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
             NaitaAeg();
@@ -50,12 +51,12 @@ namespace Aleksejev_Xamarin
             if (onoff)
             {
                 onoff = false;
-                ooff_btn.Text = "Lülita sisse";
+                onoff_btn.Text = "Lülita sisse";
             }
             else
             {
                 onoff = true;
-                ooff_btn.Text = "Lülita valja";
+                onoff_btn.Text = "Lülita valja";
 
             }
         }

@@ -28,14 +28,14 @@ namespace Aleksejev_Xamarin
             };
             Button Boxbtn = new Button
             {
-                Text = "Timer",
+                Text = "Box",
                 BackgroundColor = Color.Fuchsia,
             };
             StackLayout st = new StackLayout
             {
                 Orientation= StackOrientation.Vertical,
                 BackgroundColor = Color.Beige,
-                Children= {Textbtn, Timerbtn,}
+                Children= {Textbtn, Timerbtn, Boxbtn}
             };
             st.BackgroundColor= Color.Aqua;
             Content= st;

@@ -26,6 +26,7 @@ namespace Aleksejev_Xamarin
             };
             TapGestureRecognizer tap=new TapGestureRecognizer();
             tap.Tapped += Tap_Tapped;
+            box.GestureRecognizers.Add(tap);
             Content = box;
             
 
@@ -39,10 +40,15 @@ namespace Aleksejev_Xamarin
            
         }
         Random rnd;
+        int x = 10;
         private void Tap_Tapped(object sender, EventArgs e)
         {
             rnd = new Random();
-            box.Color= Color.FromRgb(rnd.Next(0));
+            box.Color= Color.FromRgb(rnd.Next(0,255), rnd.Next(0,255), rnd.Next(0,255));
+            x += 10;
+            box.WidthRequest = box.Width + 5;
+            box.HeightRequest= box.Height + 7;
+            box.Rotation += 1000000;
         }
         private async void Backbtn_Clicked(object sender, EventArgs e)
         {
