@@ -31,29 +31,32 @@ namespace Aleksejev_Xamarin
                 Text = "Box",
                 BackgroundColor = Color.Fuchsia,
             };
+            Button Valgusfoorbtn = new Button
+            {
+                Text = "Valgusfoor page",
+                BackgroundColor = Color.Fuchsia,
+                TextColor = Color.Black,
+            };
             StackLayout st = new StackLayout
             {
                 Orientation= StackOrientation.Vertical,
                 BackgroundColor = Color.Beige,
-                Children= {Textbtn, Timerbtn, Boxbtn}
+                Children= {Textbtn, Timerbtn, Boxbtn, Valgusfoorbtn}
             };
+            
             st.BackgroundColor= Color.Aqua;
             Content= st;
             Textbtn.Clicked += Textbtn_Clicked;
             Timerbtn.Clicked += Timerbtn_Clicked;
             Boxbtn.Clicked += Boxbtn_Clicked;
-            try
-            {
-                Vibration.Vibrate();
-                var a = TimeSpan.FromSeconds(0.5);
-                Vibration.Vibrate(a);
-            }
-            catch (Exception)
-            {
-            }
+            Valgusfoorbtn.Clicked += Valgusfoorbtn_Clicked;
+            
 
         }
-
+        private async void Valgusfoorbtn_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Valgusfoor());
+        }
 
         private async void Textbtn_Clicked(object sender, EventArgs e)
         {
